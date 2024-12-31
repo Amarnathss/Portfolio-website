@@ -551,7 +551,7 @@ textarea{
 .form-inputs > input:hover{
     border: 1px solid white;
 }
-.text-area{
+.text-area > textarea{
     color:white;
 }
 
