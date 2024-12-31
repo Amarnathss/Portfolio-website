@@ -137,3 +137,39 @@ themeSwitch.addEventListener("change", () => {
 });
 
 
+  document.querySelector('.btn').addEventListener('click', async (e) => {
+    e.preventDefault();
+
+    const name = document.querySelector('.input-field[placeholder="Name"]').value;
+    const email = document.querySelector('.input-field[placeholder="Email"]').value;
+    const message = document.querySelector('textarea').value;
+
+    if (!name || !email || !message) {
+      alert('Please fill out all fields.');
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:3000/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+        document.querySelector('.input-field[placeholder="Name"]').value = '';
+        document.querySelector('.input-field[placeholder="Email"]').value = '';
+        document.querySelector('textarea').value = '';
+      } else {
+        alert('Failed to send message.');
+      }
+    } catch (error) {
+      alert('An error occurred while sending the message.');
+      console.error(error);
+    }
+  });
+
+
+
+
