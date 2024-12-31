@@ -550,6 +550,9 @@ textarea{
 .form-inputs > input:hover{
     border: 1px solid white;
 }
+.text-area{
+    color:white;
+}
 
 /* ----- FOOTER BOX ----- */
 footer{
