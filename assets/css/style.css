@@ -544,6 +544,12 @@ textarea{
     font-size: 18px;
     rotate: -45deg;
 }
+.form-inputs > input{
+    color : white;
+}
+.form-inputs > input:hover{
+    border: 1px solid white;
+}
 
 /* ----- FOOTER BOX ----- */
 footer{
