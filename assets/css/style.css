@@ -403,7 +403,7 @@ h3{
     display: flex;
     width: 100%;
     justify-content: space-between;
-    gap: 18px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 .project-box{
@@ -412,8 +412,8 @@ h3{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 30%;
-    height: 260px;
+    width: 32%;
+    height: 280px;
     /* background: var(--color-white); */
     background: rgba(117, 117, 117, 0.135);
     border-radius: 20px;
