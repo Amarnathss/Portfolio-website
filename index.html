@@ -44,9 +44,9 @@
           </ul>
         </div>
         <div class="nav-button">
-            <button class="btn" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1eZtIfj6R2vDgSPhAmq0Hz9D9IK1vv7Ev'">
-    Download CV <i class="uil uil-file-alt"></i>
-</button>
+            <button class="btn" onclick="downloadCV()">
+        Download CV <i class="uil uil-file-alt"></i>
+    </button>
         </div>
 
         <input
@@ -338,6 +338,18 @@
         </div>
       </footer>
     </div>
+
+
+    <script>
+    function downloadCV() {
+        const link = document.createElement("a");
+        link.href = "https://drive.google.com/uc?export=download&id=1eZtIfj6R2vDgSPhAmq0Hz9D9IK1vv7Ev";
+        link.download = "My_CV.pdf";  // This ensures it is downloaded instead of opened
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
 
     <!-- ----- TYPING JS Link ----- -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
